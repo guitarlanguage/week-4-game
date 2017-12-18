@@ -17,38 +17,155 @@
       </header>
 
       <div class = "rules">
-        <p>You will be given a random numer at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-        <p>The value of each crystal is hidden from you and until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+          <p>You will be given a random numer at the start of the game.</p>
+          <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+          <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+          <p>The value of each crystal is hidden from you and until you click on it.</p>
+          <p>Each time when the game starts, the game will change the values of each crystal.</p>
       </div>  <!--div class = "rules" -->
 
-      <div id="computersRandomNumbertoMatch">
+      <div class="row">
+<!--_________________COLUMN 1_______________________________________________-->
+          <div class= "col-sm-6">
+              <button id="computersRandomNumbertoMatch">Computer's Randomly Generated Number
 
-      </div>  <!--computersRandomNumbertoMatch>-->
+              </button>  <!--ID = computersRandomNumbertoMatch>-->
+          </div> <!-- <div class= "col-sm-3"> -->
+<!--_________________COLUMN 2_______________________________________________-->
+          <div class= "col-sm-6">
+              <button id="winsAndLosses">
+                Wins: <br>
+                losses: <br>
+              </button>  <!--ID = theScore>-->
+          </div> <!-- <div class= "col-sm-3"> -->
+     </div> <!-- <div class="row"> -->
+<!--________________End_Of_Row_Block________________________________________-->
 
-      <div id="redRuby">
 
-      </div>  <!--redRuby-->
+     <div class="row">
+<!--_________________COLUMN 1_______________________________________________-->
+         <div class= "col-sm-3">
+             <button id="redRuby" class="allRubys">redRuby
+                 <!-- <img src = "assets/crystal1.png" width= "150" #> -->
+             </button>  <!--ID = redRuby-->
+         </div> <!-- <div class= "col-sm-3"> -->
+<!--_________________COLUMN 2_______________________________________________-->
+          <div class= "col-sm-3">
+              <button id="blueRuby" class="allRubys">blueRuby
 
-      <div id="blueRuby">
+              </button>  <!--ID = blueRuby-->
+          </div> <!-- <div class= "col-sm-3"> -->
+<!--_________________COLUMN 3_______________________________________________-->
+          <div class= "col-sm-3">
+              <button id="yellowRuby" class="allRubys">yellowRuby
 
-      </div>  <!--blueRuby-->
+              </button>  <!--yellowRuby-->
+          </div> <!-- <div class= "col-sm-3"> -->
+<!--_________________COLUMN 4_______________________________________________-->
+          <div class= "col-sm-3">
+              <button id="greenRuby" class="allRubys">greenRuby
 
-      <div id="yellowRuby">
+              </button>  <!--greenRuby-->
+          </div> <!-- <div class= "column"> -->
+     </div> <!-- <div class="row"> -->
+<!--________________End_Of_Row_Block________________________________________-->
 
-      </div>  <!--yellowRuby-->
 
-      <div id="greenRuby">
+     <div class="row">
+<!--_________________COLUMN 1_______________________________________________-->
+         <div class= "col-sm-4">
+         </div> <!-- <div class= "col-sm-4"> -->
 
-      </div>  <!--greenRuby-->
+<!--_________________COLUMN 2_______________________________________________-->
+         <div class= "col-sm-4">
+             <button id="yourTotalScoreIsPrompt">yourTotalScoreIsPrompt
+             </button>  <!--ID >-->
+
+             <button id="yourTotalScoreIsThis">yourTotalScoreIsThis
+             </button>  <!--ID>-->
+         </div> <!-- <div class= "col-sm-4"> -->
+
+<!--_________________COLUMN 3_______________________________________________-->
+         <div class= "col-sm-4">
+         </div> <!-- <div class= "col-sm-4"> -->
+    </div> <!-- <div class="row"> -->
+<!--________________End_Of_Row_Block________________________________________-->
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src = "assets/javascript/game.js">
+    <!-- <script src = "assets/javascript/game.js"> -->
+
+
+<script type="text/javascript">
+    //computer creates a random number between 19 and 120
+    // global variable to include in future functions
+    var computersRandomlyGeneratedNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+
+    //when the user clicks a button, a number is generated between 1 and 12
+    //(assign each button a number randomly)
+    var rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var randomRedRubyValue = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var randomBlueRubyValue = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var randomYellowRubyValue = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var randomGreenRubyValue = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    // assign a variable to each button within the scope to keep it a 5 for example throughout the game
+    // when guesses match random number you win, when it doesn't they lose
+    var wins = 0;
+    var losses = 0;
+    var totalScore;
+    var counter = 0;
+    var arrayRubyPossibilityValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    //this function will reset the computer's number to match and the user's score
+    function resetComputersRandomNumbertoMatchandyourTotalScoreIsThis(){
+      totalScore = 0;
+      $("#yourTotalScoreIsThis").text(totalScore);
+      $("#computersRandomNumbertoMatch").text(computersRandomlyGeneratedNumber);
+
+    }
+
+    function blueRuby(){
+      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("#blueRuby").text(rubyValues);
+    }
+    function redRuby(){
+      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("#redRuby").text(rubyValues);
+    }
+    function yellowRuby(){
+      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("#yellowRuby").text(rubyValues);
+
+    }
+    function greenRuby(){
+      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("#greenRuby").text(rubyValues);
+    }
+
+
+
+    //when game ends the random computer number is reset and a new computer number is generated
+    //new numbers are assigned to the buttons.
+
+
+
+    $(document).ready(function() {
+      resetComputersRandomNumbertoMatchandyourTotalScoreIsThis()
+
+      redRuby();
+      blueRuby();
+      yellowRuby();
+      greenRuby();
+
+      $()
+
+
+
+    });
+</script>
   </body>
 </html>
