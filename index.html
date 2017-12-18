@@ -129,21 +129,49 @@
     }
 
     function blueRuby(){
-      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      $("#blueRuby").text(rubyValues);
+      $("#blueRuby").on("click", function() {
+      //     rubyValues
+      //     var crystalValue = $(this).attr("data-crystalvalue");
+      // crystalValue = parseInt(crystalValue);
+
+      counter += randomBlueRubyValue;
+      // $("#blueRuby").text(counter);
+      console.log(counter);
+      })
     }
     function redRuby(){
-      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      $("#redRuby").text(rubyValues);
+      $("#redRuby").on("click", function() {
+      //     rubyValues
+      //     var crystalValue = $(this).attr("data-crystalvalue");
+      // crystalValue = parseInt(crystalValue);
+
+      counter += randomRedRubyValue;
+      // $("#blueRuby").text(counter);
+      console.log(counter);
+      })
     }
     function yellowRuby(){
-      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      $("#yellowRuby").text(rubyValues);
+      $("#yellowRuby").on("click", function() {
+      //     rubyValues
+      //     var crystalValue = $(this).attr("data-crystalvalue");
+      // crystalValue = parseInt(crystalValue);
+
+      counter += randomYellowRubyValue;
+      // $("#blueRuby").text(counter);
+      console.log(counter);
+      })
 
     }
     function greenRuby(){
-      rubyValues = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      $("#greenRuby").text(rubyValues);
+      $("#greenRuby").on("click", function() {
+      //     rubyValues
+      //     var crystalValue = $(this).attr("data-crystalvalue");
+      // crystalValue = parseInt(crystalValue);
+
+      counter += randomGreenRubyValue;
+      // $("#blueRuby").text(counter);
+      console.log(counter);
+      })
     }
 
 
@@ -161,7 +189,7 @@
       yellowRuby();
       greenRuby();
 
-      $()
+
 
 
 
