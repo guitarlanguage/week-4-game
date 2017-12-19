@@ -13,57 +13,60 @@
   <body>
 
       <header>
-          <h1>Chrystals Collector</h1>
+          <h1>Crystals Collector</h1>
       </header>
 
       <div class = "rules">
           <p>You will be given a random numer at the start of the game.
-              There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-          <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-          <p>The value of each crystal is hidden from you and until you click on it.
+              There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+              You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+          The value of each crystal is hidden from you and until you click on it.
               Each time when the game starts, the game will change the values of each crystal.</p>
       </div>  <!--div class = "rules" -->
 
       <div class="row">
 <!--_________________COLUMN 1_______________________________________________-->
-          <div class= "col-sm-6">
-              <button id="computersRandomNumbertoMatch">Computer's Randomly Generated Number
+          <div class= "col-sm-6 overhead">
+              <div id="computersRandomNumbertoMatch">
+                <p><span>Try to match the number below:</span></p>
+                <span class="insert"></span>
 
-              </button>  <!--ID = computersRandomNumbertoMatch>-->
+              </div>  <!--ID = computersRandomNumbertoMatch>-->
           </div> <!-- <div class= "col-sm-3"> -->
 <!--_________________COLUMN 2_______________________________________________-->
-          <div class= "col-sm-6">
-              <button id="winsAndLosses">
+          <div class= "col-sm-6 overhead">
+              <div id="winsAndLosses">
+                 <p><span class="tally">Wins and Losses Tally:</span></p>
                  <span class="winsCounter"></span><br>
                  <span class="lossCounter"></span>
-              </button>  <!--ID = theScore>-->
+              </div>  <!--ID = theScore>-->
           </div> <!-- <div class= "col-sm-3"> -->
      </div> <!-- <div class="row">   End_Of_Row_Block_______________________-->
 
      <div class="row">
 <!--_________________COLUMN 1_______________________________________________-->
          <div class= "col-sm-3">
-             <button id="redRuby" class="allRubys">redRuby
+             <img id="redRuby" src="assets/images/Ruby-Stone-Free-Download-PNG.png"class="allRubys">
                  <span></span>
-             </button>  <!--ID = redRuby-->
+             <!--ID = redRuby-->
          </div> <!-- <div class= "col-sm-3"> -->
 <!--_________________COLUMN 2_______________________________________________-->
           <div class= "col-sm-3">
-              <button id="blueRuby" class="allRubys">blueRuby
+              <img id="blueRuby" src="assets/images/Sapphire-Stone-Free-Download-PNG.png" class="allRubys">
                  <span></span>
-              </button>  <!--ID = blueRuby-->
+              <!--ID = blueRuby-->
           </div> <!-- <div class= "col-sm-3"> -->
 <!--_________________COLUMN 3_______________________________________________-->
           <div class= "col-sm-3">
-              <button id="yellowRuby" class="allRubys">yellowRuby
+              <img id="yellowRuby" src="assets/images/Diamond-Free-Download-PNG.png"class="allRubys">
                   <span></span>
-              </button>  <!--yellowRuby-->
+              <!--yellowRuby-->
           </div> <!-- <div class= "col-sm-3"> -->
 <!--_________________COLUMN 4_______________________________________________-->
           <div class= "col-sm-3">
-              <button id="greenRuby" class="allRubys">greenRuby
+              <img id="greenRuby" src="assets/images/Emerald-Stone-Free-PNG-Image.png" class="allRubys">
                   <span></span>
-              </button>  <!--greenRuby-->
+              <!--greenRuby-->
           </div> <!-- <div class= "column"> -->
      </div> <!-- <div class="row"> End_Of_Row_Block________________________ -->
 
@@ -74,11 +77,11 @@
 
 <!--_________________COLUMN 2_______________________________________________-->
          <div class= "col-sm-4">
-             <button id="yourTotalScoreIsPrompt">yourTotalScoreIsPrompt
-             </button>  <!--ID >-->
+             <div id="yourTotalScoreIsPrompt">Your Total Score
+             </div>  <!--ID >-->
 
-             <button id="yourTotalScoreIsThis">yourTotalScoreIsThis
-             </button>  <!--ID>-->
+             <div id="yourTotalScoreIsThis">yourTotalScoreIsThis
+             </div>  <!--ID>-->
          </div> <!-- <div class= "col-sm-4"> -->
 
 <!--_________________COLUMN 3_______________________________________________-->
@@ -95,87 +98,8 @@
     <!-- <script src = "assets/javascript/game.js"> -->
 
 
-<script type="text/javascript">
-    //computer creates a random number between 19 and 120
-    var computersRandomlyGeneratedNumber = Math.floor(Math.random() * 102) + 19;
-    // creating random values between 1 and 12 for each ruby(chrystal) #ID
-    var randomRedRubyValue = Math.floor(Math.random() * 12) + 1;
-    var randomBlueRubyValue = Math.floor(Math.random() * 12) + 1;
-    var randomYellowRubyValue = Math.floor(Math.random() * 12) + 1;
-    var randomGreenRubyValue = Math.floor(Math.random() * 12) + 1;
-    // counter, wins, losses, (array for possible later use if Math.random doesn't work out)
-    var wins = 0;
-    var losses = 0;
-    var totalScore;
-    var counter;
-    // var rubyPossibleValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+<script type="text/javascript" src="assets/javascript/game.js">
 
-    //this function will reset (the computer's number to match )and the (user's score)
-    function resetComputersRandomNumbertoMatchandyourTotalScoreIsThis(){
-      console.log("resetComputersRandomNumbertoMatchandyourTotalScoreIsThis");
-      totalScore = 0;
-      counter = 0;
-      computersRandomlyGeneratedNumber = Math.floor(Math.random() * 102) + 19;
-      $("#yourTotalScoreIsThis").text(totalScore);
-      $("#computersRandomNumbertoMatch").text(computersRandomlyGeneratedNumber);
-    }
-    //binding function to include all ruby click events
-    function binding(){
-      console.log("binding");
-      $("#blueRuby").on("click", function() {
-          counter += randomBlueRubyValue;
-          $("#yourTotalScoreIsThis").html(" " + counter);
-          checkWinOrLose();
-      });
-
-      $("#yellowRuby").on("click", function() {
-
-          counter += randomYellowRubyValue;
-          $("#yourTotalScoreIsThis").html(" " + counter);
-          checkWinOrLose();
-      });
-
-      $("#redRuby").on("click", function() {
-          counter += randomRedRubyValue;
-          $("#yourTotalScoreIsThis").html(" " + counter);
-          checkWinOrLose();
-      });
-
-      $("#greenRuby").on("click", function() {
-          counter += randomGreenRubyValue;
-          $("#yourTotalScoreIsThis").html(" " + counter);
-          checkWinOrLose();
-      });
-    }
-    function checkWinOrLose(){
-      console.log("checkWinOrLose");
-
-      if(counter < computersRandomlyGeneratedNumber){
-        return;
-      }
-      else if(counter === computersRandomlyGeneratedNumber){
-        wins++;
-        $(".winsCounter").html("wins: " + wins);
-        alert("you win");
-        resetComputersRandomNumbertoMatchandyourTotalScoreIsThis();
-      } else if(counter >= computersRandomlyGeneratedNumber){
-        losses++;
-        $(".lossCounter").html("losses: " + losses);
-        alert("you lose");
-        resetComputersRandomNumbertoMatchandyourTotalScoreIsThis();
-      }
-    }
-    //when game ends the random computer number is reset and a new computer number is generated
-    //new numbers are assigned to the buttons.
-
-    $(document).ready(function() {
-        //setting up the game
-        resetComputersRandomNumbertoMatchandyourTotalScoreIsThis();
-        //adding accumulated click events
-        binding();
-        //logic that creates a win/loss outcoume
-
-    });
 </script>
   </body>
 </html>

@@ -1,62 +1,79 @@
+body{
+  color: gold;
+  background-image: url("../images/congruent_outline.png");
+}
 button {
  text-align: center;
  margin: 25px;
 }
+
 #computersRandomNumbertoMatch {
-  background-color: lightpink;
+  /* background-color: lightpink; */
   width: 100%;
   height: 100%;
 }
 
 #winsAndLosses {
-  background-color: teal;
+  /* background-color: teal; */
   width: 100%;
   height: 100%;
 }
+.overhead {
+  height: 7em;
+  text-align: center;
+}
 
+.overhead p {
+  font-size: 1.5em;
+}
+
+.overhead p span {
+  border-bottom: 1px solid gold;
+}
+.allRubys{
+  height: 300px;
+  max-width: 300px;
+
+}
 #redRuby {
-  background-color: red;
   width: 100%;
   height: 100%;
 }
 
 #blueRuby {
-  background-color: blue;
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 
 #yellowRuby {
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 100%;
   height: 100%;
 }
 
 #greenRuby {
-  background-color: green;
+  background-color: none;
   width: 100%;
-  height: 100%;
+  height: 75%;
 }
 
 #yourTotalScoreIsPrompt {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   width: 100%;
   height: 100%;
 }
 
 #yourTotalScoreIsThis {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   width: 100%;
   height: 100%;
 }
 
-
-
 p {
-  margin: 25px;
+  /* margin: 25px; */
 }
 
 h1 {
-  margin: 25px;
+  /* margin: 25px; */
   text-align: center;
 }
