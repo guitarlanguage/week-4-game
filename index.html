@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Chrystals Collector</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,86 +10,101 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-  </head>
-  <body>
+</head>
 
-      <header>
-          <h1>Crystals Collector</h1>
-      </header>
+<body>
 
-      <div class = "rules">
-          <p>You will be given a random numer at the start of the game.
-              There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-              You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
-          The value of each crystal is hidden from you and until you click on it.
-              Each time when the game starts, the game will change the values of each crystal.</p>
-      </div>  <!--div class = "rules" -->
+    <header>
+        <h1>Crystals Collector</h1>
+    </header>
 
-      <div class="row">
-<!--_________________COLUMN 1_______________________________________________-->
-          <div class= "col-sm-6 overhead">
-              <div id="computersRandomNumbertoMatch">
+    <div class="rules">
+        <p>You will be given a random numer at the start of the game. There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to the random number.
+            You lose the game if your total score goes above the random number. The value of each crystal is hidden from you and until you click on it. Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+    <!--div class = "rules" -->
+
+    <div class="row">
+        <!--_________________COLUMN 1_______________________________________________-->
+        <div class="col-sm-6 overhead">
+            <div id="computersRandomNumbertoMatch">
                 <p><span>Try to match the number below:</span></p>
                 <span class="insert"></span>
 
-              </div>  <!--ID = computersRandomNumbertoMatch>-->
-          </div> <!-- <div class= "col-sm-3"> -->
-<!--_________________COLUMN 2_______________________________________________-->
-          <div class= "col-sm-6 overhead">
-              <div id="winsAndLosses">
-                 <p><span class="tally">Wins and Losses Tally:</span></p>
-                 <span class="winsCounter"></span><br>
-                 <span class="lossCounter"></span>
-              </div>  <!--ID = theScore>-->
-          </div> <!-- <div class= "col-sm-3"> -->
-     </div> <!-- <div class="row">   End_Of_Row_Block_______________________-->
+            </div>
+            <!--ID = computersRandomNumbertoMatch>-->
+        </div>
+        <!-- <div class= "col-sm-3"> -->
+        <!--_________________COLUMN 2_______________________________________________-->
+        <div class="col-sm-6 overhead">
+            <div id="winsAndLosses">
+                <p><span class="tally">Wins and Losses Tally:</span></p>
+                <span class="winsCounter"></span><br>
+                <span class="lossCounter"></span>
+            </div>
+            <!--ID = theScore>-->
+        </div>
+        <!-- <div class= "col-sm-3"> -->
+    </div>
+    <!-- <div class="row">   End_Of_Row_Block_______________________-->
 
-     <div class="row">
-<!--_________________COLUMN 1_______________________________________________-->
-         <div class= "col-sm-3">
-             <img id="redRuby" src="assets/images/Ruby-Stone-Free-Download-PNG.png"class="allRubys">
-                 <span></span>
-             <!--ID = redRuby-->
-         </div> <!-- <div class= "col-sm-3"> -->
-<!--_________________COLUMN 2_______________________________________________-->
-          <div class= "col-sm-3">
-              <img id="blueRuby" src="assets/images/Sapphire-Stone-Free-Download-PNG.png" class="allRubys">
-                 <span></span>
-              <!--ID = blueRuby-->
-          </div> <!-- <div class= "col-sm-3"> -->
-<!--_________________COLUMN 3_______________________________________________-->
-          <div class= "col-sm-3">
-              <img id="yellowRuby" src="assets/images/Diamond-Free-Download-PNG.png"class="allRubys">
-                  <span></span>
-              <!--yellowRuby-->
-          </div> <!-- <div class= "col-sm-3"> -->
-<!--_________________COLUMN 4_______________________________________________-->
-          <div class= "col-sm-3">
-              <img id="greenRuby" src="assets/images/Emerald-Stone-Free-PNG-Image.png" class="allRubys">
-                  <span></span>
-              <!--greenRuby-->
-          </div> <!-- <div class= "column"> -->
-     </div> <!-- <div class="row"> End_Of_Row_Block________________________ -->
+    <div class="row">
+        <!--_________________COLUMN 1_______________________________________________-->
+        <div class="col-sm-3">
+            <img id="redRuby" src="assets/images/Ruby-Stone-Free-Download-PNG.png" class="allRubys">
+            <span></span>
+            <!--ID = redRuby-->
+        </div>
+        <!-- <div class= "col-sm-3"> -->
+        <!--_________________COLUMN 2_______________________________________________-->
+        <div class="col-sm-3">
+            <img id="blueRuby" src="assets/images/Sapphire-Stone-Free-Download-PNG.png" class="allRubys">
+            <span></span>
+            <!--ID = blueRuby-->
+        </div>
+        <!-- <div class= "col-sm-3"> -->
+        <!--_________________COLUMN 3_______________________________________________-->
+        <div class="col-sm-3">
+            <img id="yellowRuby" src="assets/images/Diamond-Free-Download-PNG.png" class="allRubys">
+            <span></span>
+            <!--yellowRuby-->
+        </div>
+        <!-- <div class= "col-sm-3"> -->
+        <!--_________________COLUMN 4_______________________________________________-->
+        <div class="col-sm-3">
+            <img id="greenRuby" src="assets/images/Emerald-Stone-Free-PNG-Image.png" class="allRubys">
+            <span></span>
+            <!--greenRuby-->
+        </div>
+        <!-- <div class= "column"> -->
+    </div>
+    <!-- <div class="row"> End_Of_Row_Block________________________ -->
 
-     <div class="row">
-<!--_________________COLUMN 1_______________________________________________-->
-         <div class= "col-sm-4">
-         </div> <!-- <div class= "col-sm-4"> -->
+    <div class="row">
+        <!--_________________COLUMN 1_______________________________________________-->
+        <div class="col-sm-4">
+        </div>
+        <!-- <div class= "col-sm-4"> -->
 
-<!--_________________COLUMN 2_______________________________________________-->
-         <div class= "col-sm-4">
-             <div id="yourTotalScoreIsPrompt">Your Total Score
-             </div>  <!--ID >-->
+        <!--_________________COLUMN 2_______________________________________________-->
+        <div class="col-sm-4">
+            <div id="yourTotalScoreIsPrompt">Your Total Score
+            </div>
+            <!--ID >-->
 
-             <div id="yourTotalScoreIsThis">yourTotalScoreIsThis
-             </div>  <!--ID>-->
-         </div> <!-- <div class= "col-sm-4"> -->
+            <div id="yourTotalScoreIsThis">yourTotalScoreIsThis
+            </div>
+            <!--ID>-->
+        </div>
+        <!-- <div class= "col-sm-4"> -->
 
-<!--_________________COLUMN 3_______________________________________________-->
-         <div class= "col-sm-4">
-         </div> <!-- <div class= "col-sm-4"> -->
-    </div> <!-- <div class="row"> -->
-<!--________________End_Of_Row_Block________________________________________-->
+        <!--_________________COLUMN 3_______________________________________________-->
+        <div class="col-sm-4">
+        </div>
+        <!-- <div class= "col-sm-4"> -->
+    </div>
+    <!-- <div class="row"> -->
+    <!--________________End_Of_Row_Block________________________________________-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -98,8 +114,8 @@
     <!-- <script src = "assets/javascript/game.js"> -->
 
 
-<script type="text/javascript" src="assets/javascript/game.js">
+    <script type="text/javascript" src="assets/javascript/game.js">
+    </script>
+</body>
 
-</script>
-  </body>
 </html>
